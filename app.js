@@ -8,7 +8,7 @@ app.use(session({
     secret: 'mysecretcookie',
     saveUninitialized: false,
     resave: false,
-    cookie: {maxAge: 60000}   // if inactive, session expires in 1 hour
+    cookie: {maxAge: 60*60*1000}   // in ms, if inactive, session expires in 1 hour
 }));
 
 app.get('/', (req, res) => {
